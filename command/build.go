@@ -19,11 +19,12 @@ type BuildCommand struct {
 }
 
 func (c BuildCommand) Run(args []string) int {
-	var cfgColor, cfgDebug, cfgForce, cfgParallel bool
+	var cfgColor, cfgDebug, cfgNoDestroy, cfgForce, cfgParallel bool
 	flags := c.Meta.FlagSet("build", FlagSetBuildFilter|FlagSetVars)
 	flags.Usage = func() { c.Ui.Say(c.Help()) }
 	flags.BoolVar(&cfgColor, "color", true, "")
 	flags.BoolVar(&cfgDebug, "debug", false, "")
+	flags.BoolVar(&cfgNoDestroy, "no-destroy-on-error", false, "")
 	flags.BoolVar(&cfgForce, "force", false, "")
 	flags.BoolVar(&cfgParallel, "parallel", true, "")
 	if err := flags.Parse(args); err != nil {
@@ -108,6 +109,7 @@ func (c BuildCommand) Run(args []string) int {
 	for _, b := range builds {
 		log.Printf("Preparing build: %s", b.Name())
 		b.SetDebug(cfgDebug)
+		b.SetNoDestroy(cfgNoDestroy)
 		b.SetForce(cfgForce)
 
 		warnings, err := b.Prepare()
@@ -280,6 +282,7 @@ Options:
 
   -debug                     Debug mode enabled for builds
   -force                     Force a build to continue if artifacts exist, deletes existing artifacts
+  -no-destroy-on-error       Prevents deletion of artifacts upon a build failure
   -machine-readable          Machine-readable output
   -except=foo,bar,baz        Build all builds other than these
   -only=foo,bar,baz          Only build the given builds by name

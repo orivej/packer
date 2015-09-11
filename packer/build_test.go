@@ -31,6 +31,7 @@ func testDefaultPackerConfig() map[string]interface{} {
 		BuildNameConfigKey:     "test",
 		BuilderTypeConfigKey:   "foo",
 		DebugConfigKey:         false,
+		NoDestroyConfigKey:     false,
 		ForceConfigKey:         false,
 		TemplatePathKey:        "",
 		UserVariablesConfigKey: make(map[string]string),
@@ -124,6 +125,32 @@ func TestBuild_Prepare_Debug(t *testing.T) {
 	builder := build.builder.(*MockBuilder)
 
 	build.SetDebug(true)
+	build.Prepare()
+	if !builder.PrepareCalled {
+		t.Fatalf("should be called")
+	}
+	if !reflect.DeepEqual(builder.PrepareConfig, []interface{}{42, packerConfig}) {
+		t.Fatalf("bad: %#v", builder.PrepareConfig)
+	}
+
+	coreProv := build.provisioners[0]
+	prov := coreProv.provisioner.(*MockProvisioner)
+	if !prov.PrepCalled {
+		t.Fatal("prepare should be called")
+	}
+	if !reflect.DeepEqual(prov.PrepConfigs, []interface{}{42, packerConfig}) {
+		t.Fatalf("bad: %#v", prov.PrepConfigs)
+	}
+}
+
+func TestBuild_Prepare_NoDestroy(t *testing.T) {
+	packerConfig := testDefaultPackerConfig()
+	packerConfig[NoDestroyConfigKey] = true
+
+	build := testBuild()
+	builder := build.builder.(*MockBuilder)
+
+	build.SetNoDestroy(true)
 	build.Prepare()
 	if !builder.PrepareCalled {
 		t.Fatalf("should be called")

@@ -21,6 +21,10 @@ const (
 	DebugConfigKey = "packer_debug"
 
 	// This is the key in configurations that is set to "true" when Packer
+	// disables the clean-up of artifacts on a failed build
+	NoDestroyConfigKey = "packer_no_destroy_on_error"
+
+	// This is the key in configurations that is set to "true" when Packer
 	// force build is enabled.
 	ForceConfigKey = "packer_force"
 
@@ -62,6 +66,10 @@ type Build interface {
 	// strictly prohibited.
 	SetDebug(bool)
 
+	// SetNoDestroy will enable/disable the clean-up of artifacts
+	// in a failed build.  This must be called prior to Prepare.
+	SetNoDestroy(bool)
+
 	// SetForce will enable/disable forcing a build when artifacts exist.
 	//
 	// When SetForce is set to true, existing artifacts from the build are
@@ -85,6 +93,7 @@ type coreBuild struct {
 	variables      map[string]string
 
 	debug         bool
+	noDestroy     bool
 	force         bool
 	l             sync.Mutex
 	prepareCalled bool
@@ -128,6 +137,7 @@ func (b *coreBuild) Prepare() (warn []string, err error) {
 		BuildNameConfigKey:     b.name,
 		BuilderTypeConfigKey:   b.builderType,
 		DebugConfigKey:         b.debug,
+		NoDestroyConfigKey:     b.noDestroy,
 		ForceConfigKey:         b.force,
 		TemplatePathKey:        b.templatePath,
 		UserVariablesConfigKey: b.variables,
@@ -215,7 +225,10 @@ func (b *coreBuild) Run(originalUi Ui, cache Cache) ([]Artifact, error) {
 	}
 
 	errors := make([]error, 0)
-	keepOriginalArtifact := len(b.postProcessors) == 0
+
+	// Keep the original artifact if there's no post processors,
+	// or if there were errors during the build.
+	keepOriginalArtifact := (len(b.postProcessors) == 0) || (len(errors) > 0 && b.noDestroy)
 
 	// Run the post-processors
 PostProcessorRunSeqLoop:
@@ -273,6 +286,9 @@ PostProcessorRunSeqLoop:
 	}
 
 	if keepOriginalArtifact {
+		if len(errors) > 0 && b.noDestroy {
+			log.Printf("Keeping original artifact for incomplete build '%s'", b.name)
+		}
 		artifacts = append(artifacts, nil)
 		copy(artifacts[1:], artifacts)
 		artifacts[0] = builderArtifact
@@ -296,6 +312,14 @@ func (b *coreBuild) SetDebug(val bool) {
 	}
 
 	b.debug = val
+}
+
+func (b *coreBuild) SetNoDestroy(val bool) {
+	if b.prepareCalled {
+		panic("prepare has already been called")
+	}
+
+	b.noDestroy = val
 }
 
 func (b *coreBuild) SetForce(val bool) {

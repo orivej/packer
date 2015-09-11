@@ -10,15 +10,16 @@ import (
 var testBuildArtifact = &packer.MockArtifact{}
 
 type testBuild struct {
-	nameCalled      bool
-	prepareCalled   bool
-	prepareWarnings []string
-	runCalled       bool
-	runCache        packer.Cache
-	runUi           packer.Ui
-	setDebugCalled  bool
-	setForceCalled  bool
-	cancelCalled    bool
+	nameCalled          bool
+	prepareCalled       bool
+	prepareWarnings     []string
+	runCalled           bool
+	runCache            packer.Cache
+	runUi               packer.Ui
+	setDebugCalled      bool
+	setNoDestroyCalled  bool
+	setForceCalled      bool
+	cancelCalled        bool
 
 	errRunResult bool
 }
@@ -47,6 +48,10 @@ func (b *testBuild) Run(ui packer.Ui, cache packer.Cache) ([]packer.Artifact, er
 
 func (b *testBuild) SetDebug(bool) {
 	b.setDebugCalled = true
+}
+
+func (b *testBuild) SetNoDestroy(bool) {
+	b.setNoDestroyCalled = true
 }
 
 func (b *testBuild) SetForce(bool) {
@@ -107,6 +112,12 @@ func TestBuild(t *testing.T) {
 	// Test SetDebug
 	bClient.SetDebug(true)
 	if !b.setDebugCalled {
+		t.Fatal("should be called")
+	}
+
+	// Test SetNoDestroy
+	bClient.SetNoDestroy(true)
+	if !b.setNoDestroyCalled {
 		t.Fatal("should be called")
 	}
 
