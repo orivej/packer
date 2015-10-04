@@ -2,16 +2,28 @@ package common
 
 import (
 	"fmt"
-	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
 	"log"
 	"time"
+
+	"github.com/mitchellh/multistep"
+	"github.com/mitchellh/packer/packer"
 )
+
+const StateHaltDebugged = "StateHaltDebugged"
 
 // MultistepDebugFn will return a proper multistep.DebugPauseFn to
 // use for debugging if you're using multistep in your builder.
 func MultistepDebugFn(ui packer.Ui) multistep.DebugPauseFn {
 	return func(loc multistep.DebugLocation, name string, state multistep.StateBag) {
+		_, halted := state.GetOk(multistep.StateHalted)
+		_, debugged := state.GetOk(StateHaltDebugged)
+
+		// debug just once, after the first halt
+		if !halted || debugged {
+			return
+		}
+		state.Put(StateHaltDebugged, true)
+
 		var locationString string
 		switch loc {
 		case multistep.DebugLocationAfterRun:
