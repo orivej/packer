@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/builder/openstack"
-	"github.com/mitchellh/packer/packer/plugin"
+	"github.com/orivej/packer/builder/openstack"
+	"github.com/orivej/packer/packer/plugin"
 )
 
 func main() {

@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 )
 
 // StepCreateImage represents a Packer build step that creates GCE machine

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 type RunConfig struct {

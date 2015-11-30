@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 	"io/ioutil"
 	"log"
 	"os"

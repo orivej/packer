@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/packer/plugin"
-	"github.com/mitchellh/packer/provisioner/windows-restart"
+	"github.com/orivej/packer/packer/plugin"
+	"github.com/orivej/packer/provisioner/windows-restart"
 )
 
 func main() {

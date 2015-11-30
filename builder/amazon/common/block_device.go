@@ -5,7 +5,7 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ec2"
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 // BlockDevice

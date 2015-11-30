@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/packer/plugin"
-	"github.com/mitchellh/packer/post-processor/docker-push"
+	"github.com/orivej/packer/packer/plugin"
+	"github.com/orivej/packer/post-processor/docker-push"
 )
 
 func main() {

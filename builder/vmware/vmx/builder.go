@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/mitchellh/multistep"
-	vmwcommon "github.com/mitchellh/packer/builder/vmware/common"
-	"github.com/mitchellh/packer/common"
-	"github.com/mitchellh/packer/helper/communicator"
-	"github.com/mitchellh/packer/packer"
+	vmwcommon "github.com/orivej/packer/builder/vmware/common"
+	"github.com/orivej/packer/common"
+	"github.com/orivej/packer/helper/communicator"
+	"github.com/orivej/packer/packer"
 )
 
 // Builder implements packer.Builder and builds the actual VMware

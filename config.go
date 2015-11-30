@@ -11,9 +11,9 @@ import (
 	"strings"
 
 	"github.com/kardianos/osext"
-	"github.com/mitchellh/packer/command"
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/packer/plugin"
+	"github.com/orivej/packer/command"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/packer/plugin"
 )
 
 // PACKERSPACE is used to represent the spaces that separate args for a command

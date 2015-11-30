@@ -4,7 +4,7 @@ import (
 	"archive/tar"
 	"errors"
 	"fmt"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 	"io"
 	"io/ioutil"
 	"log"

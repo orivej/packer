@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/packer/plugin"
-	"github.com/mitchellh/packer/post-processor/artifice"
+	"github.com/orivej/packer/packer/plugin"
+	"github.com/orivej/packer/post-processor/artifice"
 )
 
 func main() {

@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/communicator/ssh"
-	"github.com/mitchellh/packer/helper/communicator"
+	"github.com/orivej/packer/communicator/ssh"
+	"github.com/orivej/packer/helper/communicator"
 	gossh "golang.org/x/crypto/ssh"
 )
 

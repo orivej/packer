@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/mitchellh/cli"
-	"github.com/mitchellh/packer/command"
+	"github.com/orivej/packer/command"
 )
 
 func TestExcludeHelpFunc(t *testing.T) {

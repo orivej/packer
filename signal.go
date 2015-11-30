@@ -6,8 +6,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/packer/plugin"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/packer/plugin"
 )
 
 // Prepares the signal handlers so that we handle interrupts properly.

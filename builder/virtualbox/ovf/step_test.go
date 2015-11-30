@@ -3,8 +3,8 @@ package ovf
 import (
 	"bytes"
 	"github.com/mitchellh/multistep"
-	vboxcommon "github.com/mitchellh/packer/builder/virtualbox/common"
-	"github.com/mitchellh/packer/packer"
+	vboxcommon "github.com/orivej/packer/builder/virtualbox/common"
+	"github.com/orivej/packer/packer"
 	"testing"
 )
 

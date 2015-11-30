@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/mitchellh/multistep"
-	vmwcommon "github.com/mitchellh/packer/builder/vmware/common"
+	vmwcommon "github.com/orivej/packer/builder/vmware/common"
 )
 
 func TestStepCloneVMX_impl(t *testing.T) {

@@ -5,8 +5,8 @@ import (
 
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 type bundleCmdData struct {

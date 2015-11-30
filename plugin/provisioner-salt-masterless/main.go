@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/packer/plugin"
-	"github.com/mitchellh/packer/provisioner/salt-masterless"
+	"github.com/orivej/packer/packer/plugin"
+	"github.com/orivej/packer/provisioner/salt-masterless"
 )
 
 func main() {

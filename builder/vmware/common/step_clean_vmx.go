@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 )
 
 // This step cleans up the VMX by removing or changing this prior to

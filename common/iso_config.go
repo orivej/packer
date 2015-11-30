@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 // ISOConfig contains configuration for downloading ISO images.

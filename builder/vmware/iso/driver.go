@@ -3,7 +3,7 @@ package iso
 import (
 	"fmt"
 
-	vmwcommon "github.com/mitchellh/packer/builder/vmware/common"
+	vmwcommon "github.com/orivej/packer/builder/vmware/common"
 )
 
 // NewDriver returns a new driver implementation for this operating

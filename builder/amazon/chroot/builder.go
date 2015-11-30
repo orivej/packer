@@ -12,11 +12,11 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/mitchellh/multistep"
-	awscommon "github.com/mitchellh/packer/builder/amazon/common"
-	"github.com/mitchellh/packer/common"
-	"github.com/mitchellh/packer/helper/config"
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/template/interpolate"
+	awscommon "github.com/orivej/packer/builder/amazon/common"
+	"github.com/orivej/packer/common"
+	"github.com/orivej/packer/helper/config"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 // The unique ID for this builder

@@ -10,9 +10,9 @@ import (
 	"strings"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/common"
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/common"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 var additionsVersionMap = map[string]string{

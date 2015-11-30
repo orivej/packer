@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 )
 
 // StepCheckExistingImage represents a Packer build step that checks if the

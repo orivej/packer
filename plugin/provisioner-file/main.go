@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/packer/plugin"
-	"github.com/mitchellh/packer/provisioner/file"
+	"github.com/orivej/packer/packer/plugin"
+	"github.com/orivej/packer/provisioner/file"
 )
 
 func main() {

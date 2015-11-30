@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/builder/parallels/iso"
-	"github.com/mitchellh/packer/packer/plugin"
+	"github.com/orivej/packer/builder/parallels/iso"
+	"github.com/orivej/packer/packer/plugin"
 )
 
 func main() {

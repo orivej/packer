@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 
 	"github.com/mitchellh/multistep"
-	vmwcommon "github.com/mitchellh/packer/builder/vmware/common"
-	"github.com/mitchellh/packer/packer"
+	vmwcommon "github.com/orivej/packer/builder/vmware/common"
+	"github.com/orivej/packer/packer"
 )
 
 // StepCloneVMX takes a VMX file and clones the VM into the output directory.

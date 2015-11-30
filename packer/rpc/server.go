@@ -6,7 +6,7 @@ import (
 	"net/rpc"
 	"sync/atomic"
 
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 	"github.com/ugorji/go/codec"
 )
 

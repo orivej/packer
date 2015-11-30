@@ -3,7 +3,7 @@ package instance
 import (
 	"fmt"
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 	"os"
 )
 

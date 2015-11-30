@@ -1,7 +1,7 @@
 package iso
 
 import (
-	vmwcommon "github.com/mitchellh/packer/builder/vmware/common"
+	vmwcommon "github.com/orivej/packer/builder/vmware/common"
 )
 
 type RemoteDriverMock struct {

@@ -1,7 +1,7 @@
 package common
 
 import (
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 type VBoxManagePostConfig struct {

@@ -8,7 +8,7 @@ import (
 	"sync"
 
 	"github.com/masterzen/winrm/winrm"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 	"github.com/packer-community/winrmcp/winrmcp"
 
 	// This import is a bit strange, but it's needed so `make updatedeps`

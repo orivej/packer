@@ -7,12 +7,12 @@ import (
 	"strings"
 
 	"github.com/mitchellh/multistep"
-	vboxcommon "github.com/mitchellh/packer/builder/virtualbox/common"
-	"github.com/mitchellh/packer/common"
-	"github.com/mitchellh/packer/helper/communicator"
-	"github.com/mitchellh/packer/helper/config"
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/template/interpolate"
+	vboxcommon "github.com/orivej/packer/builder/virtualbox/common"
+	"github.com/orivej/packer/common"
+	"github.com/orivej/packer/helper/communicator"
+	"github.com/orivej/packer/helper/config"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 const BuilderId = "mitchellh.virtualbox"

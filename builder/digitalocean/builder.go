@@ -9,9 +9,9 @@ import (
 
 	"github.com/digitalocean/godo"
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/common"
-	"github.com/mitchellh/packer/helper/communicator"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/common"
+	"github.com/orivej/packer/helper/communicator"
+	"github.com/orivej/packer/packer"
 	"golang.org/x/oauth2"
 )
 

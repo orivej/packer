@@ -9,7 +9,7 @@ import (
 	"os"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 	"golang.org/x/crypto/ssh"
 )
 

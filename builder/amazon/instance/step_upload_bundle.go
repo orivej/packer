@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 type uploadCmdData struct {

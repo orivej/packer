@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 
 	"github.com/hashicorp/go-checkpoint"
-	"github.com/mitchellh/packer/command"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/command"
+	"github.com/orivej/packer/packer"
 )
 
 func init() {

@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 
 	"github.com/mitchellh/multistep"
-	vmwcommon "github.com/mitchellh/packer/builder/vmware/common"
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/template/interpolate"
+	vmwcommon "github.com/orivej/packer/builder/vmware/common"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 type vmxTemplateData struct {

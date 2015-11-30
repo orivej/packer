@@ -3,7 +3,7 @@ package openstack
 import (
 	"fmt"
 
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 // ImageConfig is for common configuration related to creating Images.

@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mitchellh/packer/builder/docker"
-	"github.com/mitchellh/packer/common"
-	"github.com/mitchellh/packer/helper/config"
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/post-processor/docker-import"
-	"github.com/mitchellh/packer/post-processor/docker-tag"
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/builder/docker"
+	"github.com/orivej/packer/common"
+	"github.com/orivej/packer/helper/config"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/post-processor/docker-import"
+	"github.com/orivej/packer/post-processor/docker-tag"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 type Config struct {

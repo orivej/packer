@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 // Config is the common configuration that communicators allow within

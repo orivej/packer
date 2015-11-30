@@ -12,7 +12,7 @@ import (
 	"os"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 )
 
 const BuilderId = "packer.file"

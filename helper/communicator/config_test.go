@@ -3,7 +3,7 @@ package communicator
 import (
 	"testing"
 
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 func testConfig() *Config {

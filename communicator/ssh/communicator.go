@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/agent"
 )

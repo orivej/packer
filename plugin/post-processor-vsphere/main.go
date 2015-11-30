@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/packer/plugin"
-	"github.com/mitchellh/packer/post-processor/vsphere"
+	"github.com/orivej/packer/packer/plugin"
+	"github.com/orivej/packer/post-processor/vsphere"
 )
 
 func main() {

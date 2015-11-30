@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mitchellh/packer/common"
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/common"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 type OutputConfig struct {

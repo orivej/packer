@@ -3,7 +3,7 @@ package common
 import (
 	"fmt"
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 )
 
 // This step removes any devices (floppy disks, ISOs, etc.) from the

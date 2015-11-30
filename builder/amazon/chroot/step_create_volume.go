@@ -7,8 +7,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/mitchellh/multistep"
-	awscommon "github.com/mitchellh/packer/builder/amazon/common"
-	"github.com/mitchellh/packer/packer"
+	awscommon "github.com/orivej/packer/builder/amazon/common"
+	"github.com/orivej/packer/packer"
 )
 
 // StepCreateVolume creates a new volume from the snapshot of the root

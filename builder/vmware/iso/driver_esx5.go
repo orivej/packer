@@ -15,8 +15,8 @@ import (
 	"time"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/communicator/ssh"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/communicator/ssh"
+	"github.com/orivej/packer/packer"
 	gossh "golang.org/x/crypto/ssh"
 )
 

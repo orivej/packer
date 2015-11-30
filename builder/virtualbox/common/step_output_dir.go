@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 )
 
 // StepOutputDir sets up the output directory by creating it if it does

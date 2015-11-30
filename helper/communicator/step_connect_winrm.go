@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/communicator/winrm"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/communicator/winrm"
+	"github.com/orivej/packer/packer"
 )
 
 // StepConnectWinRM is a multistep Step implementation that waits for WinRM

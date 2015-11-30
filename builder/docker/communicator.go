@@ -17,7 +17,7 @@ import (
 
 	"github.com/ActiveState/tail"
 	"github.com/hashicorp/go-version"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 )
 
 type Communicator struct {

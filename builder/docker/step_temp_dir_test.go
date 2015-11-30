@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 )
 
 func TestStepTempDir_impl(t *testing.T) {

@@ -3,8 +3,8 @@ package common
 import (
 	"time"
 
-	"github.com/mitchellh/packer/helper/communicator"
-	"github.com/mitchellh/packer/template/interpolate"
+	"github.com/orivej/packer/helper/communicator"
+	"github.com/orivej/packer/template/interpolate"
 )
 
 type SSHConfig struct {

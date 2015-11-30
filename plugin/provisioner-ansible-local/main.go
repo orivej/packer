@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/packer/plugin"
-	"github.com/mitchellh/packer/provisioner/ansible-local"
+	"github.com/orivej/packer/packer/plugin"
+	"github.com/orivej/packer/provisioner/ansible-local"
 )
 
 func main() {

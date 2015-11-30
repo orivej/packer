@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mitchellh/packer/builder/docker"
-	"github.com/mitchellh/packer/packer/plugin"
+	"github.com/orivej/packer/builder/docker"
+	"github.com/orivej/packer/packer/plugin"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package null
 import (
 	"fmt"
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/communicator/ssh"
+	"github.com/orivej/packer/communicator/ssh"
 	gossh "golang.org/x/crypto/ssh"
 	"io/ioutil"
 )

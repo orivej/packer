@@ -10,8 +10,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/template"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/template"
 )
 
 type BuildCommand struct {

@@ -6,9 +6,9 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ec2"
-	"github.com/mitchellh/packer/builder/amazon/common"
-	builderT "github.com/mitchellh/packer/helper/builder/testing"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/builder/amazon/common"
+	builderT "github.com/orivej/packer/helper/builder/testing"
+	"github.com/orivej/packer/packer"
 )
 
 func TestBuilderTagsAcc_basic(t *testing.T) {

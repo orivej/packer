@@ -3,8 +3,8 @@ package pvm
 import (
 	"bytes"
 	"github.com/mitchellh/multistep"
-	parallelscommon "github.com/mitchellh/packer/builder/parallels/common"
-	"github.com/mitchellh/packer/packer"
+	parallelscommon "github.com/orivej/packer/builder/parallels/common"
+	"github.com/orivej/packer/packer"
 	"testing"
 )
 

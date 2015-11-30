@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 )
 
 const actionRetry multistep.StepAction = multistep.ActionHalt + 1

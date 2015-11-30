@@ -7,8 +7,8 @@ import (
 	"runtime"
 
 	"github.com/mitchellh/multistep"
-	"github.com/mitchellh/packer/common/uuid"
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/common/uuid"
+	"github.com/orivej/packer/packer"
 	"github.com/rackspace/gophercloud/openstack/compute/v2/extensions/keypairs"
 )
 

@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/mitchellh/packer/helper/communicator"
+	"github.com/orivej/packer/helper/communicator"
 )
 
 func init() {

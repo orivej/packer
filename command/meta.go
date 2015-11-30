@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/mitchellh/packer/helper/flag-kv"
-	"github.com/mitchellh/packer/helper/flag-slice"
-	"github.com/mitchellh/packer/packer"
-	"github.com/mitchellh/packer/template"
+	"github.com/orivej/packer/helper/flag-kv"
+	"github.com/orivej/packer/helper/flag-slice"
+	"github.com/orivej/packer/packer"
+	"github.com/orivej/packer/template"
 )
 
 // FlagSetFlags is an enum to define what flags are present in the

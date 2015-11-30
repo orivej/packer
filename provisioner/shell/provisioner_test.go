@@ -1,7 +1,7 @@
 package shell
 
 import (
-	"github.com/mitchellh/packer/packer"
+	"github.com/orivej/packer/packer"
 	"io/ioutil"
 	"os"
 	"testing"
