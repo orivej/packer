@@ -118,15 +118,12 @@ func (b *Builder) Run(ui packer.Ui, hook packer.Hook, cache packer.Cache) (packe
 		},
 	}
 
-	// Run the steps.
 	if b.config.PackerDebug {
-		b.runner = &multistep.DebugRunner{
-			Steps:   steps,
-			PauseFn: common.MultistepDebugFn(ui),
-		}
-	} else {
-		b.runner = &multistep.BasicRunner{Steps: steps}
+		steps = common.MultistepDebugSteps(steps, ui)
 	}
+
+	// Run the steps.
+	b.runner = &multistep.BasicRunner{Steps: steps}
 	b.runner.Run(state)
 
 	// Report any errors.

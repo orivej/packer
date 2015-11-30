@@ -147,16 +147,12 @@ func (p *PostProcessor) PostProcess(ui packer.Ui, artifact packer.Artifact) (pac
 		}
 	}
 
-	// Run the steps
 	if p.config.PackerDebug {
-		p.runner = &multistep.DebugRunner{
-			Steps:   steps,
-			PauseFn: common.MultistepDebugFn(ui),
-		}
-	} else {
-		p.runner = &multistep.BasicRunner{Steps: steps}
+		steps = common.MultistepDebugSteps(steps, ui)
 	}
 
+	// Run the steps
+	p.runner = &multistep.BasicRunner{Steps: steps}
 	p.runner.Run(state)
 
 	// If there was an error, return that
