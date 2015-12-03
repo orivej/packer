@@ -110,7 +110,7 @@ func wrappedMain() int {
 	log.Printf("Built with Go Version: %s", runtime.Version())
 
 	// Prepare stdin for plugin usage by switching it to a pipe
-	setupStdin()
+	//setupStdin()
 
 	config, err := loadConfig()
 	if err != nil {
